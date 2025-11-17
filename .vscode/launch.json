@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendApiApplication<backendApi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.huertohogar.backendApi.BackendApiApplication",
+            "projectName": "backendApi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
