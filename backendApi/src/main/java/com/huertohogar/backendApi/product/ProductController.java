@@ -75,20 +75,20 @@ public class ProductController {
         return ResponseEntity.ok(products);
     }
     
-    // GET  Obtener solo productos con stock disponible
+    // GET  Obtener solo productos con cantidadKg disponible
     @GetMapping("/disp")
     public ResponseEntity<List<Product>> getDispProducts() {
         List<Product> products = productService.getDispProducts();
         return ResponseEntity.ok(products);
     }
     
-    // PATCH Actualizar solo el stock
-    @PatchMapping("/{id}/stock")
-    public ResponseEntity<Product> updateStock(
+    // PATCH Actualizar solo el cantidadKg
+    @PatchMapping("/{id}/cantidadKg")
+    public ResponseEntity<Product> updatecantidadKg(
             @PathVariable Long id, 
-            @RequestParam Integer stock) {
+            @RequestParam Integer cantidadKg) {
         try {
-            Product updatedProduct = productService.updateStock(id, stock);
+            Product updatedProduct = productService.updateKg(id, cantidadKg);
             return ResponseEntity.ok(updatedProduct);
         } catch (RuntimeException e) {
             return ResponseEntity.notFound().build();

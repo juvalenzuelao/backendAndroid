@@ -25,7 +25,7 @@ public class Product {
     private Double precio;
     
     @Column(nullable = false)
-    private Integer stock;
+    private Integer cantidadKg;
     
     @Column(nullable = false)
     private String categoria;
